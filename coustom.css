@@ -118,6 +118,7 @@ body {
   margin-left: 54%;
   top: 126px;
   font-size: 14px;
+  display: none;
 }
 
 .id span {
@@ -252,6 +253,7 @@ body {
   border: 2px solid #1688f0;
   color: #e5e5e5;
   font-family: var(--fallback-font);
+  text-decoration: none !important;
 }
 
 .link-btn:hover {
@@ -263,6 +265,10 @@ body {
 .repo-list p {
   padding: 0em 0.5em;
   margin: 0.5em 0;
+}
+
+.repo-list a {
+  text-decoration: none !important;
 }
 
 /* Track */
@@ -367,6 +373,18 @@ body {
     max-height: fit-content;
   }
 
+  .home img {
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .home:hover {
+    transform: none;
+  }
+
+  #main .error {
+    margin-top: 54px
+  }
+
   .card {
     padding: 1rem;
     padding-top: 36px;
@@ -442,6 +460,14 @@ body {
     font-size: 11px;
   }
 
+  .home img {
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .home:hover {
+    transform: none;
+  }
+
   .search {
     width: 250px;
     margin: 20px auto;
@@ -456,7 +482,7 @@ body {
   }
 
   .user-info h2 {
-    margin-left: -3%;
+    margin-left: -7%;
   }
 
   .user-info ul li {
