@@ -10,7 +10,7 @@
 
 body {
   width: 100%;
-  background: #310158eb;
+  background: #150026;
   /* background-color: #500075; */
   display: flex;
   flex-direction: column;
@@ -22,6 +22,7 @@ body {
 }
 
 .nav {
+  margin-top: 12px;
   width: 100%;
   min-height: fit-content;
   display: flex;
@@ -64,9 +65,8 @@ body {
   margin-top: 15px;
 }
 
-
 .bar input {
-  background-image: linear-gradient(315deg, #31037ce9 0%, #51047aeb 100%);
+  background-image: linear-gradient(315deg, #31037ce9 0%, #51047a 100%);
   backdrop-filter: blur(1);
   border-radius: 10px;
   border: none;
@@ -75,11 +75,31 @@ body {
   font-size: 1rem;
   padding: 1rem;
   width: 400px;
-  box-shadow: #00001681 5px 5px 15px;
+}
+
+.bar a {
+  text-decoration: none;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  margin-left: 89px;
+}
+
+.bar .profile {
+  width: 45px;
+  height: fit-content;
+  position: absolute;
+  margin-left: -51px;
+  margin-top: -6px;
+  /* box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); */
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.bar .profile:hover {
+  -webkit-box-reflect: below 1px
+    linear-gradient(to bottom, #00000000, #00000037);
 }
 
 .bar p {
-  margin-left: 90px;
+  margin-left: -7px;
   font-size: 130%;
   color: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -97,6 +117,9 @@ input::placeholder {
 input:focus {
   outline: none;
 }
+
+/********  Main Card *********/
+
 #main {
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
@@ -110,13 +133,13 @@ input:focus {
   color: red;
   margin-top: 168px;
   font-size: 3rem;
-  font-family: 'Handjet', cursive;
+  font-family: "Handjet", cursive;
   font-variant: all-small-caps;
 }
 
 .card {
-  background-color: #383872b0;
-  background-image: linear-gradient(315deg, #6d00a8eb 0%, #2c0768e9 100%);
+  background-color: #00000bb3;
+  background-image: linear-gradient(315deg, #32004de9 0%, #160039e9 100%);
   border-radius: 20px;
   display: flex;
   padding: 3rem;
@@ -126,7 +149,6 @@ input:focus {
   box-shadow: #02002498 0 0 15px;
   margin-top: 150px;
 }
-
 
 .avatar {
   border: 10px solid #2a2a72;
@@ -141,9 +163,20 @@ input:focus {
   margin-top: 10px;
 }
 
+.user-info p {
+  margin: 2px;
+  color: #e3e3e3bb;
+}
+
 .user-info h2 {
   margin-top: 0;
-  font-family: 'Kanit', sans-serif;
+  font-family: "Kanit", sans-serif;
+}
+
+.user-info .location {
+  margin-top: 8px;
+  color: #ffffff;
+  margin-bottom: 8px;
 }
 
 .user-info ul {
@@ -152,12 +185,18 @@ input:focus {
   list-style-type: none;
   padding: 0;
   max-width: 400px;
+  margin-left: 3px;
 }
 
 .user-info ul li {
   display: flex;
   margin-right: 10px;
   align-items: center;
+  width: fit-content;
+}
+
+.user-info .location .icon {
+  color: #0000ff;
 }
 
 .user-info ul li strong {
@@ -170,7 +209,7 @@ input:focus {
 }
 
 #repos a {
-  box-shadow: 1px 1px 5px 2px #0000005e;
+  box-shadow: 2px 2px 2px 0.2px #0000003c;
 }
 
 .repo {
@@ -184,6 +223,8 @@ input:focus {
   margin-bottom: 0.5rem;
   text-decoration: none;
 }
+
+/******* Footer Section *******/
 
 /* Responsive Adjustments */
 
@@ -214,7 +255,7 @@ input:focus {
   }
 
   .bar p {
-    margin-left: 30px;
+    margin-left: -4.5px;
     font-size: 121%;
   }
 
@@ -222,18 +263,31 @@ input:focus {
     cursor: pointer;
   }
 
+  #main {
+    max-width: fit-content;
+  }
+
   #main .error {
     color: red;
     margin-top: 120px;
     font-size: 2.2rem;
-    font-family: 'Handjet', cursive;
+    font-family: "Handjet", cursive;
     font-variant: all-small-caps;
   }
 
   .card {
     margin-top: 98px;
     padding: 1.5rem;
-    max-width: 706px;
+    /* max-width: 706px; */
+  }
+
+  .user-info .location {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .user-info ul {
+    margin-left: 3px;
   }
 }
 
@@ -242,7 +296,7 @@ input:focus {
   .nav {
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
   }
 
   .logo {
@@ -263,7 +317,8 @@ input:focus {
   .bar {
     flex-direction: row;
     align-items: flex-start;
-    gap: 5px;
+    gap: 0px;
+    margin-top: 35px;
   }
 
   .bar p {
@@ -272,6 +327,10 @@ input:focus {
 
   .bar input {
     max-width: none;
+  }
+
+  .bar .profile {
+    margin-top: 3px;
   }
 
   #main {
@@ -283,8 +342,9 @@ input:focus {
     color: red;
     margin-top: 90px;
     font-size: 2.2rem;
-    font-family: 'Handjet', cursive;
+    font-family: "Handjet", cursive;
     font-variant: all-small-caps;
+    margin-left: 39%;
   }
 
   .card {
@@ -298,9 +358,16 @@ input:focus {
     border: 8px solid #482a72;
   }
 
+  .user-info .location {
+    margin-top: 10px;
+  }
+
   .user-info ul {
-    max-width: none;
     margin-top: 20px;
+  }
+
+  .user-info p {
+    width: 87%;
   }
 }
 
@@ -309,6 +376,37 @@ input:focus {
     margin-top: 40px;
     width: 100%;
   } */
+
+  .logo p {
+    margin-left: 25px;
+  }
+
+  .logo img {
+    margin-left: -13px;
+    margin-top: 4px;
+  }
+
+  .bar input {
+    max-width: 75%;
+  }
+
+  .bar a {
+    margin-left: 2px;
+  }
+
+  .bar p {
+    display: none;
+  }
+
+  #main {
+    margin-top: 7px;
+    width: 99%;
+  }
+
+  #main .error {
+    margin-left: 35%;
+    font-size: 55px;
+  }
 
   .card {
     margin-top: 35px;
@@ -331,14 +429,34 @@ input:focus {
 
   .user-info p {
     font-size: 1rem;
-    margin-top: 40px;
+    margin-top: 74px;
     display: flex;
     margin-left: -129px;
+    width: 161%;
   }
 
-  .user-info .info {
+  .location .icon {
+    margin-right: 6px;
+    margin-top: 3px
+  }
+
+  .user-info .location {
+    margin-top: 12px;
+    color: #ffffff;
+    font-size: 16px;
+  }
+
+  .user-info .info{
     overflow-wrap: break-word;
-    margin-left: -129px;
+    margin-left: -128px;
+  }
+
+  .user-info .info li{
+    font-size: 12px;
+  }
+
+  .user-info .info li strong{
+    font-size: 12px;
   }
 
   .repos {

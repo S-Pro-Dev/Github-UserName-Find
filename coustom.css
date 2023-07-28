@@ -1,0 +1,474 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Poppins:ital,wght@0,400;1,300;1,400&family=Roboto:ital,wght@0,700;1,400&display=swap");
+
+:root {
+  --main-font: "Merriweather", serif;
+  --secondary-font: "Poppins", sans-serif;
+  --fallback-font: "Roboto", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background: #150026;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  /* background-image: url(background.png); */
+  background-size: 1000px 900px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.profile {
+  /* background-color: black; */
+  margin-top: 15px;
+  width: 100%;
+  min-height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.profile .img {
+  width: 80px;
+}
+
+.profile p {
+  font-family: var(--main-font);
+  font-size: 2.5rem;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.home {
+  width: fit-content;
+  height: fit-content;
+}
+
+.home img {
+  position: absolute;
+  width: 73px;
+  height: 20px;
+  margin-top: 52px;
+  margin-left: -23px;
+  transition: transform 0.4s ease-in-out;
+}
+
+.home:hover {
+  transform: scale(1.1);
+}
+/********** Card Contain ***********/
+
+.container {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.container.fade-out {
+  opacity: 0;
+}
+
+.container .error {
+  color: red;
+  margin-top: 168px;
+  font-size: 3rem;
+  font-family: "Handjet", cursive;
+  font-variant: all-small-caps;
+}
+
+.card {
+  background-color: #383872b0;
+  background-image: linear-gradient(315deg, #32004de9 0%, #160039e9 100%);
+  border-radius: 20px;
+  display: flex;
+  padding: 3rem;
+  max-width: 800px;
+  backdrop-filter: blur(1);
+  border: none;
+  margin-top: 42px;
+}
+
+.avatar {
+  border: 10px solid #49006d8c;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+}
+
+.user-info {
+  color: #eee;
+  margin-left: 2rem;
+  margin-top: 10px;
+}
+
+.user-info .id {
+  position: absolute;
+  margin-left: 54%;
+  top: 126px;
+  font-size: 14px;
+}
+
+.id span {
+  color: rgba(255, 98, 98, 0.541);
+  font-size: 16px;
+}
+
+/* ********* icon ********** */
+
+.icon {
+  font-size: 21px;
+  color: dodgerblue;
+  margin-right: 12px;
+}
+
+/* ***********  *********** */
+
+.user-info p {
+  margin: 2px;
+  color: #e3e3e3bb;
+  margin-top: 9px;
+}
+
+.user-info h2 {
+  margin-left: 0%;
+  margin-top: 0;
+  font-family: "Kanit", sans-serif;
+  display: inline-block;
+}
+
+.user-info .user {
+  margin-left: 12px;
+  margin-bottom: 5px;
+  color: #eeeeee75;
+  position: relative;
+  top: -3px;
+}
+
+.user-info .info {
+  margin-top: 12px;
+}
+
+.user-info ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  max-width: 400px;
+}
+
+.user-info ul li {
+  margin-left: 1%;
+  display: flex;
+  margin-right: 10px;
+  align-items: center;
+}
+
+.user-info ul li strong {
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+/* '!important' is to make sure that when we add the class using JS, it takes precendence */
+/* .hide {
+  display: none !important;
+} */
+
+.search {
+  background-image: linear-gradient(315deg, #1c0049 0%, #340050 100%);
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 1rem;
+  width: 400px;
+  margin-top: 50px;
+  margin-left: 200px;
+  outline: none;
+}
+
+/********** repository *********/
+
+/* Adjusting the width to make 3 cards in a row */
+
+.repos {
+  margin-top: 25px;
+  /* background-color: #eeeeee4f; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+
+.repo-list {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.repo-list .code-logo {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.repo-list li {
+  width: 100%;
+  /* min-height: 212px; */
+  min-height: fit-content;
+  border-radius: 10px;
+  margin: 1em 0;
+  border: 2px solid #ffffff;
+  padding: 1em;
+  text-align: center;
+  background-color: #3b076e0e;
+  backdrop-filter: blur(10px);
+  list-style: none;
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.repo-list li:hover {
+  background-color: #1f0039;
+}
+
+.link-btn {
+  padding: 10px 20px;
+  background: #000000;
+  border-radius: 30px;
+  border: 2px solid #1688f0;
+  color: #e5e5e5;
+  font-family: var(--fallback-font);
+}
+
+.link-btn:hover {
+  background: #1e1e1e;
+  border: 2px solid #1688f0;
+  transform: scale(1.1);
+}
+
+.repo-list p {
+  padding: 0em 0.5em;
+  margin: 0.5em 0;
+}
+
+/* Track */
+::-webkit-scrollbar {
+  width: 0;
+}
+
+/*********  */
+
+@media screen and (max-width: 800px) {
+  .home a img {
+    width: 61px;
+    height: 17px;
+  }
+
+  .profile img {
+    max-width: 60px;
+  }
+
+  .profile p {
+    font-size: 28px;
+  }
+
+  .container {
+    max-width: 90%;
+    max-height: fit-content;
+  }
+
+  .card {
+    padding: 2rem;
+  }
+
+  .card .avatar {
+    max-width: 130px;
+    max-height: 130px;
+    border: 8px solid #49006d8c;
+  }
+
+  .search {
+    width: 375px;
+    margin-left: 20%;
+  }
+
+  .user-info {
+    margin-left: 1rem;
+    font-size: 15px;
+  }
+
+  .user-info .id {
+    margin-left: 56%;
+    top: 110px;
+  }
+
+  .user-info .icon {
+    font-size: 19px;
+  }
+
+  .user-info h2 {
+    font-size: 18px;
+  }
+
+  .info .follow {
+    margin-left: 12px;
+  }
+
+  .info {
+    margin-left: 3px;
+  }
+
+  .repos {
+    width: 90%;
+    margin: 1rem auto;
+  }
+
+  .repo-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .home a img {
+    top: 72px;
+    left: 68px;
+    width: 52px;
+    height: 15px;
+  }
+
+  .profile {
+    width: 95%;
+  }
+
+  .profile img {
+    max-width: 60px;
+  }
+
+  .profile p {
+    font-size: 28px;
+  }
+
+  .container {
+    max-width: 90%;
+    max-height: fit-content;
+  }
+
+  .card {
+    padding: 1rem;
+    padding-top: 36px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card .avatar {
+    max-width: 121px;
+    max-height: 119px;
+    border: 6px solid #49006d8c;
+    margin-bottom: 20px;
+  }
+
+  .search {
+    width: 352px;
+    height: 48px;
+    margin-top: 24px;
+    text-align: center;
+    transform: translateX(-4%);
+  }
+
+  .user-info {
+    margin-left: 1rem;
+    font-size: 14px;
+  }
+
+  .user-info .user {
+    font-size: 10px;
+  }
+
+  .user-info .id {
+    margin-left: 70%;
+    top: 107px;
+    font-size: 12px;
+  }
+
+  .user-info p span {
+    font-size: 14px;
+  }
+
+  .user-info .icon {
+    font-size: 17px;
+  }
+
+  .user-info h2 {
+    font-size: 18px;
+  }
+
+  .info {
+    margin-left: 11%;
+  }
+
+  .repos {
+    width: 90%;
+    margin: 1rem auto;
+  }
+
+  .repo-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .link-btn {
+    padding: 7px 15px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .user-info .id {
+    margin-left: 64%;
+    top: 26%;
+    font-size: 11px;
+  }
+
+  .search {
+    width: 250px;
+    margin: 20px auto;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    margin-left: 57px;
+    position: static;
+  }
+
+  .user-info p {
+    text-align: initial;
+  }
+
+  .user-info h2 {
+    margin-left: -3%;
+  }
+
+  .user-info ul li {
+    margin-left: -14%;
+  }
+
+  .repo-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .link-btn {
+    padding: 7px 6px;
+    text-decoration-line: blink;
+  }
+}

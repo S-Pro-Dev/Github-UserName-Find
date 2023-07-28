@@ -10,7 +10,7 @@ const getUser = async (username) => {
       throw new Error("User not found");
     }
     const data = await response.json();
-    // console.log(data);
+    console.log(data);
 
     const card = `
     <div class="card">
@@ -24,6 +24,7 @@ const getUser = async (username) => {
         <div class="user-info">
           <h2>${data.name}</h2>
           <p>${data.bio}</p>
+          <p class="location"><i class="fa-solid fa-location-dot icon" style="margin-right: 16px;"></i>${data.location}</p>
           <ul class="info">
           <li>${data.followers}<strong>Followers</strong></li>
           <li>${data.following}<strong>Following</strong></li>
@@ -118,3 +119,5 @@ document.addEventListener("DOMContentLoaded", function () {
     card.classList.remove("fade-out");
   }, 1000); // 1000 milliseconds = 1 second
 });
+
+
