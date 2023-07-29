@@ -8,7 +8,7 @@
   margin: 0;
 }
 
-body {
+.first-body {
   width: 100%;
   background: #150026;
   /* background-color: #500075; */
@@ -77,30 +77,27 @@ body {
   width: 400px;
 }
 
-.bar a {
-  text-decoration: none;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  margin-left: 89px;
-}
-
 .bar .profile {
-  width: 45px;
+  width: 60px;
   height: fit-content;
   position: absolute;
-  margin-left: -51px;
-  margin-top: -6px;
-  /* box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); */
-  transition: box-shadow 0.3s ease-in-out;
+  margin-left: 384px;
+  margin-top: 1px;
+  transition: box-shadow 0.5s ease-in-out;
+  -webkit-transition: box-shadow 0.6s ease-in-out;
 }
 
 .bar .profile:hover {
   -webkit-box-reflect: below 1px
     linear-gradient(to bottom, #00000000, #00000037);
+  width: 70px;
+  cursor: pointer;
 }
 
 .bar p {
-  margin-left: -7px;
-  font-size: 130%;
+  margin-top: 11px;
+  margin-left: 113px;
+  font-size: 137%;
   color: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 700;
@@ -249,18 +246,24 @@ input:focus {
   }
 
   .bar input {
-    width: 303px;
+    width: 279px;
     padding: 11px;
     box-shadow: #0000165b 3.5px 3.5px 9px;
   }
 
   .bar p {
-    margin-left: -4.5px;
+    margin-left: 89.5px;
     font-size: 121%;
   }
 
   .bar p:hover {
     cursor: pointer;
+  }
+
+  .bar .profile {
+    margin-left: 256.5px;
+    width: 47px;
+    margin-top: 6px;
   }
 
   #main {
@@ -330,7 +333,9 @@ input:focus {
   }
 
   .bar .profile {
-    margin-top: 3px;
+    margin-left: 246px;
+    margin-top: -1px;
+    width: 58px;
   }
 
   #main {
@@ -398,6 +403,11 @@ input:focus {
     display: none;
   }
 
+  .bar .profile:hover {
+    width: 63px;
+    top: 84px;
+  }
+
   #main {
     margin-top: 7px;
     width: 99%;
@@ -437,7 +447,7 @@ input:focus {
 
   .location .icon {
     margin-right: 6px;
-    margin-top: 3px
+    margin-top: 3px;
   }
 
   .user-info .location {
@@ -446,20 +456,590 @@ input:focus {
     font-size: 16px;
   }
 
-  .user-info .info{
+  .user-info .info {
     overflow-wrap: break-word;
     margin-left: -128px;
   }
 
-  .user-info .info li{
+  .user-info .info li {
     font-size: 12px;
   }
 
-  .user-info .info li strong{
+  .user-info .info li strong {
     font-size: 12px;
   }
 
   .repos {
     margin-left: -129px;
+  }
+}
+
+/*************||||||||| Profile Section ||||||||||****************/
+
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Poppins:ital,wght@0,400;1,300;1,400&family=Roboto:ital,wght@0,700;1,400&display=swap");
+
+:root {
+  --main-font: "Merriweather", serif;
+  --secondary-font: "Poppins", sans-serif;
+  --fallback-font: "Roboto", sans-serif;
+}
+
+.body {
+  width: 100%;
+  background: #150026;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  background-image: url(img/background1.png);
+  background-size: 850px 910px;
+  background-repeat: no-repeat;
+  background-position: center 50px;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.profile-card {
+  /* background-color: black; */
+  margin-top: 15px;
+  width: 100%;
+  min-height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.profile-card .img {
+  width: 80px;
+}
+
+.profile-card p {
+  font-family: var(--main-font);
+  font-size: 2.5rem;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.home {
+  width: fit-content;
+  height: fit-content;
+}
+
+.home img {
+  position: absolute;
+  width: 73px;
+  height: 20px;
+  margin-top: 52px;
+  margin-left: -23px;
+  transition: transform 0.4s ease-in-out;
+}
+
+.home:hover {
+  transform: scale(1.1);
+}
+
+/********** Card Contain ***********/
+
+.container {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.container.fade-out {
+  opacity: 0;
+}
+
+.container .error {
+  color: red;
+  margin-top: 168px;
+  font-size: 3rem;
+  font-family: "Handjet", cursive;
+  font-variant: all-small-caps;
+}
+
+.card-contaier {
+  background-color: #383872b0;
+  background-image: linear-gradient(315deg, #32004de9 0%, #160039e9 100%);
+  border-radius: 20px;
+  display: flex;
+  padding: 3rem;
+  max-width: 800px;
+  backdrop-filter: blur(1);
+  border: none;
+  margin-top: 42px;
+}
+
+.avatar-name {
+  border: 10px solid #49006d8c;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+}
+
+.user-infos {
+  color: #eee;
+  margin-left: 2rem;
+  margin-top: 10px;
+}
+
+.user-infos .id {
+  position: absolute;
+  margin-left: 54%;
+  top: 126px;
+  font-size: 14px;
+  display: none;
+}
+
+.id span {
+  color: rgba(255, 98, 98, 0.541);
+  font-size: 16px;
+}
+
+/* ********* icon ********** */
+
+.icon {
+  font-size: 21px;
+  color: dodgerblue;
+  margin-right: 12px;
+}
+
+/* ***********  *********** */
+
+.user-infos p {
+  margin: 2px;
+  color: #e3e3e3bb;
+  margin-top: 9px;
+}
+
+.user-infos h2 {
+  margin-left: 0%;
+  margin-top: 0;
+  font-family: "Kanit", sans-serif;
+  display: inline-block;
+}
+
+.user-infos .user {
+  margin-left: 12px;
+  margin-bottom: 5px;
+  color: #eeeeee75;
+  position: relative;
+  top: -3px;
+}
+
+.user-infos .info {
+  margin-top: 12px;
+}
+
+.user-infos ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  max-width: 400px;
+}
+
+.user-infos ul li {
+  margin-left: 1%;
+  display: flex;
+  margin-right: 10px;
+  align-items: center;
+}
+
+.user-infos ul li strong {
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+/* '!important' is to make sure that when we add the class using JS, it takes precendence */
+/* .hide {
+  display: none !important;
+} */
+
+.search {
+  background-image: linear-gradient(315deg, #1c0049 0%, #340050 100%);
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 1rem;
+  width: 400px;
+  margin-top: 50px;
+  margin-left: 200px;
+  outline: none;
+}
+
+/********** repository *********/
+
+/* Adjusting the width to make 3 cards in a row */
+
+.repository {
+  margin-top: 25px;
+  /* background-color: #eeeeee4f; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+
+.repo-list {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.repo-list .code-logo {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.repo-list li {
+  width: 100%;
+  /* min-height: 212px; */
+  min-height: fit-content;
+  border-radius: 10px;
+  margin: 1em 0;
+  border: 2px solid #ffffff;
+  padding: 1em;
+  text-align: center;
+  background-color: #3b076e0e;
+  backdrop-filter: blur(10px);
+  list-style: none;
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.repo-list li:hover {
+  background-color: #1f0039;
+}
+
+.link-btn {
+  padding: 10px 20px;
+  background: #000000;
+  border-radius: 30px;
+  border: 2px solid #1688f0;
+  color: #e5e5e5;
+  font-family: var(--fallback-font);
+  text-decoration: none !important;
+}
+
+.link-btn:hover {
+  background: #1e1e1e;
+  border: 2px solid #1688f0;
+  transform: scale(1.1);
+}
+
+.repo-list p {
+  padding: 0em 0.5em;
+  margin: 0.5em 0;
+}
+
+.repo-list a {
+  text-decoration: none !important;
+}
+
+/* Track */
+::-webkit-scrollbar {
+  width: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .home a img {
+    width: 61px;
+    height: 17px;
+  }
+
+  .profile-card img {
+    max-width: 60px;
+  }
+
+  .profile-card p {
+    font-size: 28px;
+  }
+
+  .container {
+    max-width: 90%;
+    max-height: fit-content;
+  }
+
+  .card-contaier {
+    padding: 2rem;
+  }
+
+  .card-contaier .avatar-name {
+    max-width: 130px;
+    max-height: 130px;
+    border: 8px solid #49006d8c;
+  }
+
+  .search {
+    width: 375px;
+    margin-left: 20%;
+  }
+
+  .user-infos {
+    margin-left: 1rem;
+    font-size: 15px;
+  }
+
+  .user-infos .id {
+    margin-left: 56%;
+    top: 110px;
+  }
+
+  .user-infos .icon {
+    font-size: 19px;
+  }
+
+  .user-infos h2 {
+    font-size: 18px;
+  }
+
+  .info .follow {
+    margin-left: 12px;
+  }
+
+  .info {
+    margin-left: 3px;
+  }
+
+  .repository {
+    width: 90%;
+    margin: 1rem auto;
+  }
+
+  .repo-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .body {
+    background-image: url(img/background1.png);
+    background-size: 560px 547px;
+    background-repeat: no-repeat;
+    background-position: center 50px;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  .home a img {
+    top: 72px;
+    left: 68px;
+    width: 52px;
+    height: 15px;
+  }
+
+  .profile-card {
+    width: 95%;
+  }
+
+  .profile-card img {
+    max-width: 60px;
+  }
+
+  .profile-card p {
+    font-size: 28px;
+  }
+
+  .container {
+    max-width: 90%;
+    max-height: fit-content;
+  }
+
+  .home img {
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .home:hover {
+    transform: none;
+  }
+
+  #main .error {
+    margin-top: 54px;
+  }
+
+  .card-container {
+    padding: 1rem;
+    padding-top: 36px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card-contaier .avatar-name {
+    max-width: 121px;
+    max-height: 119px;
+    border: 6px solid #49006d8c;
+    margin-bottom: 20px;
+  }
+
+  .search {
+    width: 352px;
+    height: 48px;
+    margin-top: 24px;
+    text-align: center;
+    margin-left: 16%;
+  }
+
+  .user-infos {
+    margin-left: 1rem;
+    font-size: 14px;
+  }
+
+  .user-infos .user {
+    font-size: 10px;
+  }
+
+  .user-infos .id {
+    margin-left: 70%;
+    top: 107px;
+    font-size: 12px;
+  }
+
+  .user-infos p span {
+    font-size: 14px;
+  }
+
+  .user-infos .icon {
+    font-size: 17px;
+  }
+
+  .user-infos h2 {
+    font-size: 18px;
+  }
+
+  .info {
+    margin-left: 11%;
+  }
+
+  .repository {
+    width: 90%;
+    margin: 1rem auto;
+  }
+
+  .repo-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .link-btn {
+    padding: 9px 14px;
+  }
+}
+
+@media screen and (max-width: 446px) {
+  .search {
+    margin-left: 7%;
+  }
+
+  .link-btn {
+    padding: 6px 17px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .body {
+    background-size: 358px 442px;
+  }
+
+  .user-infos .id {
+    margin-left: 64%;
+    top: 26%;
+    font-size: 11px;
+  }
+
+  .home img {
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .home:hover {
+    transform: none;
+  }
+
+  .search {
+    width: 250px;
+    margin: 20px auto;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    margin-left: 57px;
+    position: static;
+  }
+
+  .user-infos {
+    margin-left: -131px;
+    margin-top: 20px;
+  }
+
+  .user-infos p {
+    text-align: initial;
+  }
+
+  .user-infos h2 {
+    margin-left: 50%;
+    width: 57%;
+    font-size: 25px;
+    max-width: 64%;
+  }
+
+  .user-infos ul li {
+    margin-left: 5%;
+  }
+
+  .user-infos ul {
+    padding: 6px;
+  }
+
+  .user-infos .user {
+    top: 5px;
+    margin-left: 161px;
+  }
+
+  .repo-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .link-btn {
+    padding: 13px 22px;
+    display: inline;
+    /* text-decoration-line: blink; */
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .search {
+    margin-left: 12%;
+  }
+}
+
+/************ Toggle button ************/
+
+/* Hide the second section by default */
+#second-section {
+  display: none;
+}
+
+/* CSS animation for slide in effect */
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* CSS animation for slide out effect */
+@keyframes slideOut {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
   }
 }
