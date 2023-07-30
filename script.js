@@ -121,35 +121,23 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
-// Function to toggle sections with animation
 function toggleSections() {
-  var firstSection = document.getElementById('first-section');
-  var secondSection = document.getElementById('second-section');
+  let firstSection = document.getElementById('firstSection');
+  let secondSection = document.getElementById('secondSection');
 
-  if (firstSection.style.display === 'block') {
-    // Apply the slide out animation to first section
-    firstSection.classList.add('slide-out');
-    // Remove the profile image click event to prevent repeated animations
-    document.querySelector('.profile').removeEventListener('click', toggleSections);
+  console.log("First Section:", firstSection);
+  console.log("Second Section:", secondSection);
 
-    // Add a delay before showing the second section to complete slide out animation
-    setTimeout(function () {
-      firstSection.style.display = 'none';
-      // Apply the slide in animation to second section
-      secondSection.style.display = 'block';
-      secondSection.classList.add('slide-in');
-
-      // Remove animation classes after the animation ends
-      setTimeout(function () {
-        secondSection.classList.remove('slide-in');
-        // Re-add the profile image click event after the animation completes
-        document.querySelector('.profile').addEventListener('click', toggleSections);
-      }, 1000); // Adjust the duration (in milliseconds) to match your animation time
-    }, 800); // Adjust the delay (in milliseconds) to match the slide-out animation time
+  if (firstSection.style.display === 'none') {
+    firstSection.style.display = 'block';
+    secondSection.style.display = 'none';
+  } else {
+    firstSection.style.display = 'none';
+    secondSection.style.display = 'block';
   }
 }
 
-// Add event listener to the profile image inside the first section
-document.querySelector('.profile').addEventListener('click', toggleSections);
+
+
+
 

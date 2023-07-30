@@ -31,6 +31,10 @@
   padding: 0px;
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
 }
 
 .nav.fade-out {
@@ -75,6 +79,10 @@
   font-size: 1rem;
   padding: 1rem;
   width: 400px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .bar .profile {
@@ -84,7 +92,10 @@
   margin-left: 384px;
   margin-top: 1px;
   transition: box-shadow 0.5s ease-in-out;
-  -webkit-transition: box-shadow 0.6s ease-in-out;
+  -webkit-transition: box-shadow 0.5s ease-in-out;
+  -moz-transition: box-shadow 0.5s ease-in-out;
+  -ms-transition: box-shadow 0.5s ease-in-out;
+  -o-transition: box-shadow 0.5s ease-in-out;
 }
 
 .bar .profile:hover {
@@ -120,6 +131,10 @@ input:focus {
 #main {
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
 }
 
 #main.fade-out {
@@ -145,6 +160,10 @@ input:focus {
   border: none;
   box-shadow: #02002498 0 0 15px;
   margin-top: 150px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
 }
 
 .avatar {
@@ -152,6 +171,10 @@ input:focus {
   border-radius: 50%;
   height: 150px;
   width: 150px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
 .user-info {
@@ -219,6 +242,10 @@ input:focus {
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
   text-decoration: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 /******* Footer Section *******/
@@ -474,6 +501,8 @@ input:focus {
   }
 }
 
+/*      **********     ******************      **********         */
+/* ************************************************************** */
 /*************||||||||| Profile Section ||||||||||****************/
 
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Poppins:ital,wght@0,400;1,300;1,400&family=Roboto:ital,wght@0,700;1,400&display=swap");
@@ -484,7 +513,7 @@ input:focus {
   --fallback-font: "Roboto", sans-serif;
 }
 
-.body {
+.second-body {
   width: 100%;
   background: #150026;
   display: flex;
@@ -495,16 +524,19 @@ input:focus {
   margin: 0;
   min-height: 100vh;
   background-image: url(img/background1.png);
-  background-size: 850px 910px;
+  background-size: 500px;
   background-repeat: no-repeat;
   background-position: center 50px;
   background-attachment: fixed;
   background-size: cover;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 0 5px 2px #282a2d;
+  line-height: 1.4;
 }
 
 .profile-card {
   /* background-color: black; */
-  margin-top: 15px;
+  padding-top: 24px;
   width: 100%;
   min-height: fit-content;
   display: flex;
@@ -522,6 +554,17 @@ input:focus {
   font-size: 2.5rem;
   color: #ffffff;
   font-weight: 700;
+  transition: box-shadow 0.5s ease-in-out;
+  -webkit-transition: box-shadow 0.5s ease-in-out;
+  -moz-transition: box-shadow 0.5s ease-in-out;
+  -ms-transition: box-shadow 0.5s ease-in-out;
+  -o-transition: box-shadow 0.5s ease-in-out;
+}
+.profile-card p:hover {
+  -webkit-box-reflect: below 1px
+    linear-gradient(to bottom, #00000000, #00000037);
+  font-size: 30px;
+  cursor: pointer;
 }
 
 .home {
@@ -545,12 +588,7 @@ input:focus {
 /********** Card Contain ***********/
 
 .container {
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.container.fade-out {
-  opacity: 0;
+  margin-left: 22%;
 }
 
 .container .error {
@@ -561,7 +599,7 @@ input:focus {
   font-variant: all-small-caps;
 }
 
-.card-contaier {
+.card-container {
   background-color: #383872b0;
   background-image: linear-gradient(315deg, #32004de9 0%, #160039e9 100%);
   border-radius: 20px;
@@ -570,7 +608,7 @@ input:focus {
   max-width: 800px;
   backdrop-filter: blur(1);
   border: none;
-  margin-top: 42px;
+  margin-top: 75px;
 }
 
 .avatar-name {
@@ -654,11 +692,6 @@ input:focus {
   margin-left: 0.5rem;
 }
 
-/* '!important' is to make sure that when we add the class using JS, it takes precendence */
-/* .hide {
-  display: none !important;
-} */
-
 .search {
   background-image: linear-gradient(315deg, #1c0049 0%, #340050 100%);
   border-radius: 10px;
@@ -683,7 +716,6 @@ input:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90%;
 }
 
 .repo-list {
@@ -749,7 +781,11 @@ input:focus {
   width: 0;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1025px) {
+  .second-body {
+    background-size: 450px;
+  }
+
   .home a img {
     width: 61px;
     height: 17px;
@@ -766,13 +802,14 @@ input:focus {
   .container {
     max-width: 90%;
     max-height: fit-content;
+    margin-left: 11%;
   }
 
-  .card-contaier {
+  .card-container {
     padding: 2rem;
   }
 
-  .card-contaier .avatar-name {
+  .card-container .avatar-name {
     max-width: 130px;
     max-height: 130px;
     border: 8px solid #49006d8c;
@@ -780,7 +817,7 @@ input:focus {
 
   .search {
     width: 375px;
-    margin-left: 20%;
+    margin-left: 22%;
   }
 
   .user-infos {
@@ -819,7 +856,7 @@ input:focus {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 769px) {
   .body {
     background-image: url(img/background1.png);
     background-size: 560px 547px;
@@ -827,13 +864,6 @@ input:focus {
     background-position: center 50px;
     background-attachment: fixed;
     background-size: cover;
-  }
-
-  .home a img {
-    top: 72px;
-    left: 68px;
-    width: 52px;
-    height: 15px;
   }
 
   .profile-card {
@@ -849,6 +879,7 @@ input:focus {
   }
 
   .container {
+    margin-left: 43px;
     max-width: 90%;
     max-height: fit-content;
   }
@@ -873,23 +904,24 @@ input:focus {
     text-align: center;
   }
 
-  .card-contaier .avatar-name {
-    max-width: 121px;
-    max-height: 119px;
-    border: 6px solid #49006d8c;
-    margin-bottom: 20px;
+  .card-container .avatar-name {
+    margin-right: -294px;
+    max-width: 123px;
+    max-height: 123px;
+    border: 8px solid #262689;
+    margin-bottom: -132px;
   }
 
   .search {
-    width: 352px;
-    height: 48px;
+    width: 362px;
+    height: 53px;
     margin-top: 24px;
     text-align: center;
-    margin-left: 16%;
+    margin-left: 6%;
   }
 
   .user-infos {
-    margin-left: 1rem;
+    text-align: left;
     font-size: 14px;
   }
 
@@ -903,6 +935,11 @@ input:focus {
     font-size: 12px;
   }
 
+  .user-infos ul {
+    margin-top: 12px;
+    margin-left: 31px;
+  }
+
   .user-infos p span {
     font-size: 14px;
   }
@@ -913,6 +950,8 @@ input:focus {
 
   .user-infos h2 {
     font-size: 18px;
+    font-weight: 500;
+    font-family: Georgia, "Times New Roman", Times, serif;
   }
 
   .info {
@@ -934,8 +973,15 @@ input:focus {
 }
 
 @media screen and (max-width: 446px) {
+  .container {
+    margin-top: 24px;
+    margin-left: -7px;
+  }
+
   .search {
-    margin-left: 7%;
+    margin-left: 14%;
+    width: 337px;
+    height: 46px;
   }
 
   .link-btn {
@@ -944,8 +990,12 @@ input:focus {
 }
 
 @media screen and (max-width: 400px) {
-  .body {
-    background-size: 358px 442px;
+  .second-body {
+    background-size: 290px;
+  }
+
+  .container {
+    margin-left: 5%;
   }
 
   .user-infos .id {
@@ -967,13 +1017,13 @@ input:focus {
     margin: 20px auto;
     padding: 0.8rem;
     font-size: 0.9rem;
-    margin-left: 57px;
+    margin-left: 43px;
     position: static;
   }
 
   .user-infos {
-    margin-left: -131px;
-    margin-top: 20px;
+    margin-left: 0px;
+    margin-top: -8px;
   }
 
   .user-infos p {
@@ -981,10 +1031,8 @@ input:focus {
   }
 
   .user-infos h2 {
-    margin-left: 50%;
-    width: 57%;
-    font-size: 25px;
-    max-width: 64%;
+    margin-left: -15%;
+    font-size: 18px;
   }
 
   .user-infos ul li {
@@ -996,8 +1044,8 @@ input:focus {
   }
 
   .user-infos .user {
-    top: 5px;
-    margin-left: 161px;
+    top: 0px;
+    margin-left: 0px;
   }
 
   .repo-list {
@@ -1011,35 +1059,201 @@ input:focus {
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 426px) {
+  .second-body {
+    background-image: 250px;
+  }
+
+  .container {
+    margin-left: 20px;
+  }
+
+  .card-container {
+    margin-top: 24px;
+  }
+
+  .card-container .avatar-name {
+    margin-right: -20px;
+    max-width: 136px;
+    max-height: 138px;
+    border: 7px solid #262689;
+    margin-bottom: 4px;
+  }
+
+  .user-infos {
+    text-align: left;
+  }
+
+  .user-infos ul {
+    margin-top: 13px;
+  }
+
+  .user-infos ul li {
+    margin-left: 2%;
+  }
+
+  .user-infos h2 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .user-infos p {
+    text-align: left;
+  }
+
   .search {
-    margin-left: 12%;
+    margin-left: 6%;
+  }
+
+  .repo-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .repository {
+    width: 78%;
+  }
+
+  .link-btn {
+    padding: 4px 5px;
   }
 }
 
-/************ Toggle button ************/
+@media screen and (max-width: 376px) {
+  .card-container .avatar-name {
+    margin-right: 165px;
+    max-width: 125px;
+    max-height: 123px;
+    border: 7px solid #262689;
+    margin-bottom: 15px;
+  }
+
+  .user-infos h2 {
+    position: absolute;
+    font-size: 25px;
+    text-align: left;
+    margin-left: 37%;
+    top: 147px;
+    width: 159px;
+    height: 87px;
+  }
+
+  .search {
+    margin-left: 13%;
+  }
+
+  .user-infos ul {
+    margin-top: 12px;
+    margin-left: 1px;
+  }
+
+  .user-infos .user {
+    top: -51px;
+    margin-left: 149px;
+  }
+  .user-infos {
+    margin-top: -47px;
+  }
+
+  .repo-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .container {
+    margin-left: 16px;
+  }
+
+  .card-container .avatar-name {
+    margin-right: -20px;
+    max-width: 100px;
+    max-height: 100px;
+    border: 4px solid #262689;
+  }
+
+  .search {
+    margin-left: 8%;
+  }
+}
 
 /* Hide the second section by default */
-#second-section {
+#secondSection {
   display: none;
 }
 
-/* CSS animation for slide in effect */
-@keyframes slideIn {
-  0% {
-    transform: translateY(-100%);
+/************ /\/\//\/\/\/\/\/\ ************/
+/************ ----------------- ************/
+/*********** /\/\/ footer \/\/\ ************/
+/************ ------------------ ************/
+/************ /\/\/\/\\/\/\/\/\/\ ************/
+
+.footer {
+  width: 100%;
+  /* background-color: #150026; */
+  color: white;
+  height: 45px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: cursive;
+  position: inherit;
+  margin-top: 50px;
+}
+
+.footer .text2 {
+  font-size: calc(20px);
+  line-height: calc(20px);
+  /*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+    0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+  color: #fccaff; */
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
+    0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+  color: #fff6a9;
+  font-family: "Sacramento", cursive;
+  text-align: center;
+  animation: blink 12s infinite;
+  -webkit-animation: blink 12s infinite;
+}
+
+@-webkit-keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
   }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
   100% {
-    transform: translateY(0);
+    color: #fccaff;
+    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
   }
 }
 
-/* CSS animation for slide out effect */
-@keyframes slideOut {
-  0% {
-    transform: translateY(0);
+@keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
   }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
   100% {
-    transform: translateY(-100%);
+    color: #fccaff;
+    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
   }
 }

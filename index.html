@@ -7,49 +7,13 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="img/GitLogo.jpg" type="image/x-icon" />
     <link rel="stylesheet" href="coustom.css" />
-    <!-- <style>
-      /* Hide the second section by default */
-      #second-section {
-        display: none;
-      }
-
-      /* CSS animation for fade effect */
-      @keyframes fadeInOut {
-        0% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
-
-      /* CSS animation for slide down effect */
-      @keyframes slideDown {
-        0% {
-          transform: translateY(-100%);
-        }
-        100% {
-          transform: translateY(0);
-        }
-      }
-
-      /* CSS animation for slide up effect */
-      @keyframes slideUp {
-        0% {
-          transform: translateY(0);
-        }
-        100% {
-          transform: translateY(-100%);
-        }
-      }
-    </style> -->
     <script
       src="https://kit.fontawesome.com/9d38bf67e1.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
-    <section class="first-body" id="first-section">
+    <div class="first-body" id="firstSection">
       <div class="nav">
         <div class="logo">
           <img src="img/SearchLogo.png" alt="SearchLogo" />
@@ -66,9 +30,9 @@
           </form>
           <img
             src="img/Profile.png"
-            alt="Profile"
+            alt="img"
             class="profile"
-            toggleSections="toggleSections()"
+            onclick="toggleSections()"
           />
           <p>Profile</p>
         </div>
@@ -101,21 +65,28 @@
         </div>
       </div> -->
       </main>
-    </section>
+      <div class="footer">
+        <span class="text1">Developer By ::</span
+        ><span class="text2"> Subham Narayan Deb</span>
+      </div>
+    </div>
 
-    <!-- ************ Profile *********** -->
+    <!-- /\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\ -->
+    <!-- **************** Second Section ***************** -->
+    <!-- ******************** Profile ******************** -->
+    <!-- /\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\ -->
 
-    <section class="body" id="second-section">
+    <div class="second-body" id="secondSection">
       <div class="profile-card">
         <img src="img/Profile.png" alt="logo" class="img" />
-        <p>Profile</p>
+        <p class="text" onclick="toggleSections()">Profile</p>
       </div>
       <!-- <div class="home">
         <img src="img/card.png" alt="home" />
       </div> -->
       <main class="container">
-        <div class="card-contaier">
-          <div>
+        <div class="card-container">
+          <div class="git">
             <img
               src="https://picsum.photos/200"
               alt="Florin Pop"
@@ -360,8 +331,11 @@
           </li>
         </ul>
       </div>
-    </section>
-
+      <div class="footer">
+        <span class="text1">Developer By ::</span
+        ><span class="text2"> Subham Narayan Deb</span>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
