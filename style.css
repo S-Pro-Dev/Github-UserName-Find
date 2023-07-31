@@ -22,7 +22,6 @@
 }
 
 .nav {
-  margin-top: 12px;
   width: 100%;
   min-height: fit-content;
   display: flex;
@@ -403,6 +402,23 @@ input:focus {
   }
 }
 
+@media screen and (max-width: 426px) {
+  .bar input {
+    margin-right: 76px;
+    width: 256px;
+  }
+
+  .bar p {
+    display: none;
+  }
+
+  .bar .profile {
+    margin-left: 275px;
+    margin-top: 0px;
+    width: 50px;
+  }
+}
+
 @media screen and (max-width: 400px) {
   /* #main {
     margin-top: 40px;
@@ -501,6 +517,19 @@ input:focus {
   }
 }
 
+@media screen and (max-width: 321px) {
+  .bar input {
+    margin-right: 46px;
+    width: 251px;
+  }
+
+  .bar .profile {
+    margin-left: 246px;
+    margin-top: 0px;
+    width: 49px;
+  }
+}
+
 /*      **********     ******************      **********         */
 /* ************************************************************** */
 /*************||||||||| Profile Section ||||||||||****************/
@@ -524,11 +553,10 @@ input:focus {
   margin: 0;
   min-height: 100vh;
   background-image: url(img/background1.png);
-  background-size: 500px;
+  background-size: 600px;
   background-repeat: no-repeat;
   background-position: center 50px;
   background-attachment: fixed;
-  background-size: cover;
   transition: all 0.4s ease-in-out;
   box-shadow: 0 0 5px 2px #282a2d;
   line-height: 1.4;
@@ -795,6 +823,10 @@ input:focus {
     max-width: 60px;
   }
 
+  .profile-card .profile:hover {
+    width: 30px;
+  }
+
   .profile-card p {
     font-size: 28px;
   }
@@ -856,14 +888,19 @@ input:focus {
   }
 }
 
+@media screen and (max-width: 799px) {
+  .container {
+    max-width: 91%;
+  }
+}
+
 @media screen and (max-width: 769px) {
   .body {
     background-image: url(img/background1.png);
-    background-size: 560px 547px;
+    background-size: 500px;
     background-repeat: no-repeat;
     background-position: center 50px;
     background-attachment: fixed;
-    background-size: cover;
   }
 
   .profile-card {
@@ -876,6 +913,10 @@ input:focus {
 
   .profile-card p {
     font-size: 28px;
+  }
+
+  .profile-card .profile:hover {
+    width: 30px;
   }
 
   .container {
@@ -898,18 +939,17 @@ input:focus {
 
   .card-container {
     padding: 1rem;
-    padding-top: 36px;
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
   .card-container .avatar-name {
-    margin-right: -294px;
-    max-width: 123px;
-    max-height: 123px;
-    border: 8px solid #262689;
-    margin-bottom: -132px;
+    margin-right: -287px;
+    max-width: 117px;
+    max-height: 117px;
+    border: 7px solid #380b60;
+    margin-bottom: -129px;
   }
 
   .search {
@@ -917,7 +957,7 @@ input:focus {
     height: 53px;
     margin-top: 24px;
     text-align: center;
-    margin-left: 6%;
+    margin-left: 23%;
   }
 
   .user-infos {
@@ -975,13 +1015,30 @@ input:focus {
 @media screen and (max-width: 446px) {
   .container {
     margin-top: 24px;
-    margin-left: -7px;
+    max-width: 80%;
+  }
+
+  .card-container {
+    margin-top: 34px;
+  }
+
+  .card-container .avatar-name {
+    margin-right: 172px;
+    max-width: 117px;
+    max-height: 117px;
+    border: 7px solid #380b60;
+    margin-bottom: 0px;
   }
 
   .search {
-    margin-left: 14%;
-    width: 337px;
-    height: 46px;
+    margin-left: 16px;
+    width: 318px;
+    height: 44px;
+  }
+
+  .user-infos ul {
+    margin-top: 12px;
+    margin-left: 21px;
   }
 
   .link-btn {
@@ -1065,7 +1122,8 @@ input:focus {
   }
 
   .container {
-    margin-left: 20px;
+    margin-top: 24px;
+    max-width: 79%;
   }
 
   .card-container {
@@ -1086,6 +1144,12 @@ input:focus {
 
   .user-infos ul {
     margin-top: 13px;
+    margin-left: 12px;
+  }
+
+  .follow {
+    margin-left: 5px;
+    color: #4887eb;
   }
 
   .user-infos ul li {
@@ -1102,15 +1166,23 @@ input:focus {
   }
 
   .search {
-    margin-left: 6%;
+    width: 308px;
   }
 
   .repo-list {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .repository {
     width: 78%;
+  }
+
+  .repo-list li {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
   }
 
   .link-btn {
@@ -1118,27 +1190,43 @@ input:focus {
   }
 }
 
-@media screen and (max-width: 376px) {
-  .card-container .avatar-name {
-    margin-right: 165px;
-    max-width: 125px;
-    max-height: 123px;
-    border: 7px solid #262689;
-    margin-bottom: 15px;
-  }
-
+@media screen and (max-width: 394px) {
   .user-infos h2 {
-    position: absolute;
-    font-size: 25px;
-    text-align: left;
-    margin-left: 37%;
-    top: 147px;
-    width: 159px;
-    height: 87px;
+    margin-left: 0%;
+    margin-top: 23px;
   }
 
   .search {
-    margin-left: 13%;
+    margin-left: 0px;
+  }
+
+  .container {
+    margin-left: 10%;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .container {
+    max-width: 90%;
+    margin-left: 5%;
+  }
+
+  .card-container .avatar-name {
+    margin-right: 139px;
+    max-width: 116px;
+    max-height: 116px;
+    border: 6px solid #3a0b52;
+    margin-bottom: 0px;
+  }
+
+  .user-infos h2 {
+    margin-left: 0%;
+    margin-top: 57px;
+  }
+
+  .search {
+    width: 306px;
+    margin-left: 3%;
   }
 
   .user-infos ul {
@@ -1146,16 +1234,20 @@ input:focus {
     margin-left: 1px;
   }
 
-  .user-infos .user {
-    top: -51px;
-    margin-left: 149px;
-  }
   .user-infos {
     margin-top: -47px;
   }
 
   .repo-list {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .footer .text1 {
+    font-size: 15px;
+  }
+
+  .footer .text2 {
+    font-size: 17px !important;
   }
 }
 
@@ -1196,7 +1288,7 @@ input:focus {
   font-size: 1.5rem;
   font-family: cursive;
   position: inherit;
-  margin-top: 50px;
+  margin-top: 120px;
 }
 
 .footer .text2 {

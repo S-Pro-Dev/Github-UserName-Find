@@ -105,8 +105,6 @@ searchBox.addEventListener("focusout", function () {
 document.addEventListener("DOMContentLoaded", function () {
   // Get the nav element
   const nav = document.querySelector(".nav");
-
-  // Get the card element
   const card = document.querySelector("#main");
 
   // Add animation classes to trigger fade-out effect for both nav and card elements
